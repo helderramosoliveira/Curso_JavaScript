@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+       
+        div{
+            background-color: rgb(216, 213, 213);
+            width: 600px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin-top: 20px;
+            /*margin-left: 104px;*/
+            box-shadow: 1px 1px 5px black ;
+        }
+        input[type=number]{  /* somente tipo number*/
+            font: 18pt arial ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"/>
+    <input type="number" name="txtn2" id="txtn2"/>
+    <input type="button" value='Somar' onclick="somar()"/>
+    <div id='res' onclick="clicar()"> Resultado </div>
+
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2') //tanto faz
+            var res = window.document.getElementById('res')
+
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+
+            res.innerText = `A soma entre os dois números é ${s}`
+            res.style.fontWeight = 'bold'        
+        }
+        
+        function clicar(){
+            window.document.getElementById('txtn1').value = null
+            window.document.getElementById('txtn2').value = null
+            window.document.getElementById('res').innerText = 'Resultado'
+            window.document.getElementById('res').style.fontWeight = 'normal'
+
+        }
+    </script>
+</body>
+</html>
