@@ -36,7 +36,7 @@ pesq = 9
 // num.indexOf(pesq) //retorna o indice em que esse valor se encontra (select dentro do array) Se não encontrar retorna -1
 
 if (num.indexOf(pesq) != -1){ 
-    console.log(`O número ${pesq} está na posição ${num.indexOf(9)}`)
+    console.log(`O número ${pesq} está na posição ${num.indexOf(pesq)}`)
 } else {
     console.log(`O valor ${pesq} não existe no array`)
 }
